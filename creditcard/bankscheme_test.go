@@ -32,8 +32,7 @@ var schemeCases = []cardSchemeTest{
 	{"00000000042", UndefinedCardProvider, true},
 
 
-	// ok
-	//{"5237 2516 2477 8133", true},
+	// ok, source: source: https://docs.adyen.com/development-resources/testing/test-card-numbers
 	{"378282246310005", AmericanExpress,true},
 	{"3714 4963 5398 431", AmericanExpress,true},
 	{"374101012180018", AmericanExpress,true},
@@ -44,16 +43,13 @@ var schemeCases = []cardSchemeTest{
 	{"4131 8400 0000 0003", Visa, true},
 	{"4017 3400 0000 0003", Visa, true},
 	{"4571 0000 0000 0001", Visa, true},
+	{"5237 2516 2477 8133", MasterCard, true},
 	{"5105105105105100", MasterCard, true},
 	{"2222 4000 7000 0005", MasterCard, true},
 	{"5577 0000 5577 0004", MasterCard, true},
 	{"2223 5204 4356 0010", MasterCard, true},
 	{"5105 1051 0510 5100", MasterCard, true},
 	{"5105   1051   0510   5100   ", MasterCard, true},
-
-
-	//// ok, source: https://docs.adyen.com/development-resources/testing/test-card-numbers
-	{"3700 0000 0000 002", AmericanExpress, true},
 }
 
 func TestGetBankScheme(t *testing.T) {
